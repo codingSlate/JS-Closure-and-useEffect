@@ -5,12 +5,13 @@ const Stopwatch = () => {
   useEffect(() => {
     const myTimer = setInterval(() => {
       setTime(time + 1);
+      // console.log('Timer set ');
+      console.log(time);
     }, 1000);
     return () => {
       clearInterval(myTimer);
     };
   }, []);
-  // console.log('Timer set ');
 
   return (
     <>
