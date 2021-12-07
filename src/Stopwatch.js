@@ -5,8 +5,8 @@ const Stopwatch = () => {
   useEffect(() => {
     const myTimer = setInterval(() => {
       setTime(time + 1);
-      // console.log('Timer set ');
-      console.log(time);
+      // console.log('Its run because of closure: Timer set ');
+      // console.log(time); // but the time is 0
     }, 1000);
     return () => {
       clearInterval(myTimer);
