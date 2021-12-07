@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const Stopwatch = () => {
   const [time, setTime] = useState(0);
 
-  const [counterActive, setCounterActive] = useState(false);
+  const [counterActive, setCounterActive] = useState(true);
 
   const curTime = useRef(0);
 
@@ -21,7 +21,7 @@ const Stopwatch = () => {
     return () => {
       clearInterval(myTimer);
     };
-  }, []);
+  }, [counterActive]);
 
   const onClickHandler = () => {
     setCounterActive((c) => !c);
