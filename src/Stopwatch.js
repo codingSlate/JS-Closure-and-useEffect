@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 const Stopwatch = () => {
   const [time, setTime] = useState(0);
 
+  const [counterActive, setCounterActive] = useState(false);
+
   const curTime = useRef(0);
 
   useEffect(() => {
@@ -18,10 +20,19 @@ const Stopwatch = () => {
     };
   }, []);
 
+  const onClickHandler = () => {
+    setCounterActive((c) => !c);
+  };
   return (
     <>
       <div>{time}</div>
-      <button>Stop</button>
+      <button
+        type="button"
+        onClick={onClickHandler}
+        aria-active={!counterActive}
+      >
+        Stop/Start
+      </button>
     </>
   );
 };
