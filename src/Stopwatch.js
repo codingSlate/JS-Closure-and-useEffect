@@ -14,7 +14,7 @@ const Stopwatch = () => {
         curTime.current++;
         // setTime(time + 1);
         setTime(curTime.current);
-        // console.log('Its run because of closure: Timer set ');
+        console.log('Its run because of closure: Timer set ');
         // console.log(time); // but the time is 0
       }, 1000);
     }
@@ -32,7 +32,7 @@ const Stopwatch = () => {
       <button
         type="button"
         onClick={onClickHandler}
-        aria-active={!counterActive}
+        aria-pressed={!counterActive}
       >
         Stop/Start
       </button>
