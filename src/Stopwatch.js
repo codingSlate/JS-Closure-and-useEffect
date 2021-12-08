@@ -26,9 +26,12 @@ const Stopwatch = () => {
   const onClickHandler = () => {
     setCounterActive((c) => !c);
   };
+
+  const formatTimer = new Date(time * 1000).toISOString().substr(11, 8);
+
   return (
     <>
-      <div>{time}</div>
+      <h2>{formatTimer}</h2>
       <button
         type="button"
         onClick={onClickHandler}
