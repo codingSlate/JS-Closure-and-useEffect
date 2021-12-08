@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const Stopwatch = () => {
   const [time, setTime] = useState(0);
 
-  const [counterActive, setCounterActive] = useState(true);
+  const [counterActive, setCounterActive] = useState(false);
 
   const curTime = useRef(0);
 
